@@ -10,10 +10,11 @@ myImage.onclick = () => {
   }
 };
 
-//Poking
+/*Poking
 document.querySelector("html").addEventListener("click", function () {
     alert("Ouch! Stop poking me!");
   });
+*/
 
 //Name on the site
 let myButton = document.querySelector("button");
@@ -30,12 +31,12 @@ function setUserName() {
   }
   
 
-  //if (!localStorage.getItem("name")) {
+  if (!localStorage.getItem("name")) {
     setUserName();
-  //} else {
+  } else {
     const storedName = localStorage.getItem("name");
     myHeading.textContent = `Mozilla is cool, ${storedName}`;
-  //}
+  }
 
   myButton.onclick = () => {
     setUserName();
