@@ -10,15 +10,22 @@ html {
 
 body, button {
     font-family: minecraftRegular;
+    color: #ffffff;
+    text-shadow: 3px 3px 0px #424242;
+    font-size: 32px;
 }
 
 body {
     width: 100%;
     margin: 0;
+    padding: 0;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    background-image: url(./images/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .minecraft-header {
@@ -26,20 +33,63 @@ body {
     justify-content: center;
 }
 
+.minecraft-logo {
+    max-width: 800px;
+    height: auto;
+    width: 100%;
+}
+
 .minecraft-menu {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    align-items: center;
+    width: 100%;   
 }
 
 .minecraft-menu__buttons {
     display: flex;
     flex-direction: column;
+    max-width: 640px;
+    width: 100%;
 }
 
+.minecraft-menu__buttons button {
+    background-image: url(./images/background-button.png);
+    padding: 0;
+    margin: 8px;
+    box-shadow: inset -3px -6px 0 0 #565656, inset 3px 3px 0 0 #AAAAAA;
+    border-width: 3px;
+    border-color: #000000;
+    height: 80px;
+}
+
+.minecraft-menu__buttons button:hover {
+    border-color: #ffffff;
+}
+
+
 .minecraft-menu__buttons--row {
+    display: flex;
     flex-direction: row;
     justify-content: center;
+}
+
+.minecraft-menu__buttons--row button {
+    flex: 1;
+}
+
+.minecraft-menu__buttons--row .minecraft-button--icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 80px;
+    padding: 0;
+}
+
+.minecraft-button--icon img {
+    width: 72px;
+    height: auto;
 }
 
 .minecraft-footer {
