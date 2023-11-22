@@ -4,9 +4,16 @@
     src:  url(./minecraft-font/fonts/minecraftregular-bmg3-webfont.woff) format(woff);
   }
 
-@keyframes gem {
+/* @keyframes gem {
     from {transform: rotate(0);}
     to {transform: rotate(180deg);}
+} */
+
+@keyframes bounce {
+  0% {transform: scale(1);}
+  50% {transform: scale(1.1);}
+  /* 75% {transform: scale(1.01);} */
+  100% {transform: scale(1);}
 }
 
 html {
@@ -16,8 +23,8 @@ html {
 body, button {
     font-family: minecraftRegular;
     color: #ffffff;
-    text-shadow: 3px 3px 0px #424242;
-    font-size: 32px;
+    text-shadow: 3px 4px 0px #3F3F3F;
+    font-size: 30px;
 }
 
 body {
@@ -41,6 +48,7 @@ p {
     display: flex;
     justify-content: center;
     margin-top: 64px;
+    overflow: hidden;
 }
 
 .minecraft-logo {
@@ -48,12 +56,21 @@ p {
     position: relative;
 }
 
-.minecraft-logo span {
+.minecraft-bounce {
+    display: flex;
     color: #FFFF00;
     text-shadow: 3px 3px 0px #3F3F00;
     position: absolute;
-    right: 0;
-    bottom: 40px;
+    right: 132px;
+    top: 148px;
+    rotate: -20deg;
+    transform-origin: center center;
+    text-align: center;
+    text-justify: auto;
+    animation: bounce 500ms cubic-bezier(.55,.05,.78,.51) infinite;
+    margin: 0;
+    padding: 0;
+    z-index: 100;
 }
 
 .minecraft-logo img {
@@ -83,7 +100,7 @@ p {
     padding: 0;
     margin: 8px;
     box-shadow: inset -3px -6px 0 0 #565656, inset 3px 3px 0 0 #AAAAAA;
-    border-width: 4px;
+    border-width: 3px;
     border-color: #000000;
     border-style: solid;
     height: 64px;
@@ -102,7 +119,7 @@ button.minecraft-realms {
     top: 0;
 }
 
-.minecraft-realms-gem {
+/* .minecraft-realms-gem {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -112,20 +129,20 @@ button.minecraft-realms {
     animation-name: gem;
     animation-duration: 1s;
     animation-iteration-count: infinite;
-}
+} */
 
-.minecraft-realms-gem img, .minecraft-realms-newspaper img {
+/* .minecraft-realms-gem img, .minecraft-realms-newspaper img {
     width: 52px;
     height: auto;
-}
+} */
 
-.minecraft-realms-newspaper {
+/* .minecraft-realms-newspaper {
     display: flex;
     flex-direction: column;
     justify-content: center;
     position: absolute;
     right: 4px;
-}
+} */
 
 .minecraft-menu__buttons--row {
     display: flex;
@@ -155,4 +172,6 @@ button.minecraft-realms {
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
+    margin: 4px;
+    
 }

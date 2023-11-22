@@ -10,6 +10,10 @@ myImage.onclick = () => {
   }
 };
 
+function chBackcolor(color) {
+document.body.style.backgroundColor = color;
+}
+
 /*Poking
 document.querySelector("html").addEventListener("click", function () {
     alert("Ouch! Stop poking me!");
@@ -26,7 +30,7 @@ function setUserName() {
       setUserName();
     } else {
       localStorage.setItem("name", myName);
-      myHeading.textContent = `Mozilla is cool, ${myName}`;
+      myHeading.textContent = `Mozilla who? Hi ${myName}!`;
     }
   }
   
@@ -35,7 +39,7 @@ function setUserName() {
     setUserName();
   } else {
     const storedName = localStorage.getItem("name");
-    myHeading.textContent = `Mozilla is cool, ${storedName}`;
+    myHeading.textContent = `Mozilla who? Hi ${storedName}`;
   }
 
   myButton.onclick = () => {
