@@ -11,8 +11,11 @@
 
 @keyframes bounce {
   0% {transform: scale(1);}
+  10% {transform: scale(1.01);}
+  25% {transform: scale(1.05);}
   50% {transform: scale(1.1);}
-  /* 75% {transform: scale(1.01);} */
+  75% {transform: scale(1.05);}
+  90% {transform: scale(1.01);}
   100% {transform: scale(1);}
 }
 
@@ -62,15 +65,14 @@ p {
     text-shadow: 3px 3px 0px #3F3F00;
     position: absolute;
     right: 132px;
-    top: 148px;
-    rotate: -20deg;
-    transform-origin: center center;
+    top: 140px;
+    rotate: -24deg;
+    animation: bounce 510ms ease-in-out infinite;
+    /* transform-origin: center center;
     text-align: center;
-    text-justify: auto;
-    animation: bounce 500ms cubic-bezier(.55,.05,.78,.51) infinite;
     margin: 0;
     padding: 0;
-    z-index: 100;
+    z-index: 100; */
 }
 
 .minecraft-logo img {
